@@ -1,0 +1,169 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@font-face {
+    font-family: 'Avenir Roman';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir Roman'), url('avenir_roman_12.woff') format('woff');
+    }
+
+    .lato-thin {
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+      
+      .lato-light {
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+      
+      .lato-regular {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .lato-bold {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      
+      .lato-black {
+        font-family: "Lato", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+      
+      .lato-thin-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+      }
+      
+      .lato-light-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+      
+      .lato-regular-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+      
+      .lato-bold-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+      
+      .lato-black-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+      }
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #ECEAE9;
+}
+  /* Header */
+header{
+    height: 10vh;
+    border-bottom: 1px solid #001E42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #001E42;
+    font-family: Avenir black;
+    font-size: 30px;
+}
+/* center */
+.center{
+    display: flex;
+}
+/* sidebar */
+.sidebar{
+    border-right: 1px solid #001E42;
+    height: 90vh;
+    width: 20rem;
+    display: flex;
+    flex-direction: column; /* Make sidebar items stack vertically */
+    justify-content: space-between; /* Align items with space between them */
+}
+.sidebar li{
+    height: 5vh;
+    width: auto;
+    color: #001E42;
+    border-bottom: 1px solid #001E42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Avenir black;
+    font-size: 20px;
+}
+.exit{
+    align-self: center;
+    margin-bottom: 20px;
+    font-family: lat;
+}
+.exit p{
+    color: #E9444C;
+}
+/* menu-container */
+/* menu header */
+.menu-container{
+    width: 100%;
+    height: 90vh;
+}
+.menu-container h2{
+    font-family: Avenir black;
+    color: #001E42;
+    font-size: 40px;
+}
+.menu-header{
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.shopping-cart{
+    width: 50px;
+    height: 50px;
+    color: #001E42;
+    fill: #001E42;
+}
+.menu{
+    padding: 20px;
+}
+.product-image{
+    width: 45%;
+    height: 30vh;
+    background-color: #ffff;
+    /* border: #fff; */
+    border: #001E42;
+    border-radius: 25px;
+}
+.product-placeholder-img{
+    width: 45%;
+    height: 30vh;
+    background-color: white;
+    border-radius: 25px;
+}
+.menu-item{
+    color: #001E42;
+}
+.feature{
+    height: 2vh;
+    padding: 10px;
+    border: 1px solid #001E42;
+    border-radius: 10px;
+}
