@@ -1,0 +1,4 @@
+.bestelling{
+    display: flex;
+    flex-direction: row;
+}

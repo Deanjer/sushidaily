@@ -6,6 +6,6 @@
     <title>Sushi Daily</title>
 </head>
 <body>
-    
+
 </body>
 </html>
