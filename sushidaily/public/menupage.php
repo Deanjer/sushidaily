@@ -17,17 +17,17 @@
             <div class="sidebar">
                 <ul>
                     <li>Sushi</li>
-                    <li>Warme gerechten</li>
+                    <li>Warm meals</li>
                     <li>Pokébowls</li>
-                    <li>Dranken</li>
+                    <li>Drinks</li>
                 </ul>
                 <div class="exit">
-                    <p class="lato-bold">Stop bestelling</p>
+                    <p class="lato-bold">Stop order</p>
                 </div>
             </div>
             <div class="menu-container">
                 <div class="menu-header">
-                    <h2 class="">Warme gerechten</h2>
+                    <h2 class="">Warm meals</h2>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
                         class="shopping-cart">
                         <path
@@ -121,6 +121,17 @@
             </div>
         </div>
     </div>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <div class="popup-header">
+            <h3>Try this</h3>
+            <span class="close-popup lato-regular" id="closePopup">No thanks</span>
+        </div>
+            
+            
+        </div>
+    </div>
+    <script src="./../assets/js/popup.js"></script>
 </body>
 
 </html>
