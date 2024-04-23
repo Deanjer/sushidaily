@@ -54,8 +54,13 @@
             </div>
             <div class="info">
                 <h1>Title</h1>
-                <div class="feature">
-                    feature
+                <div class="categorie">
+                    <div class="feature">
+                        feature
+                    </div>
+                    <div class="feature">
+                        feature
+                    </div>
                 </div>
                 <div class="omschrijving">
                     <p>
