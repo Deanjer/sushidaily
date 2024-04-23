@@ -199,3 +199,21 @@ hr.rounded {
     background-color: #bbb;
     border-radius: 5px;
 }
+
+.afronding{
+    border-top: solid black;
+    display: flex;
+}
+
+.volgende{
+    width: 50%;
+    background-color: red;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.volgende h1{
+    margin: 0;
+}

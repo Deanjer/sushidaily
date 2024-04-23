@@ -79,6 +79,10 @@
         </div>
         <hr class="rounded">
     </div>
+    <div class="afronding">
+        <div class="totaal"><h1>$23,99</h1></div>
+        <div class="volgende"><h1>Volgende</h1></div>
+    </div>
 </body>
 
 </html>
