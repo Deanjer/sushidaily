@@ -233,6 +233,7 @@ hr.rounded {
 
 .volgende button:hover{
     background-color: #da0000;
+    cursor: pointer;
 }
 
 .volgende h1{
