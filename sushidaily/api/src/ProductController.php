@@ -27,7 +27,6 @@ class ProductController
                 echo json_encode($this->gateway->getAll());
                 break;
             case 'POST':
-
         }
     }
 }
