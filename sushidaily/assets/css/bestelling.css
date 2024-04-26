@@ -74,11 +74,26 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin-bottom: 80px;
 }
 
 .center h1{
     font-family: Avenir black;
     font-size: xx-large;
+}
+
+.title{
+    padding: 10px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title button{
+    background-color: white;
+    font-size: 50px;
+    cursor: pointer;
+    border: none;
 }
 
 .bestelling {
@@ -187,8 +202,7 @@
     display: flex;
     justify-content: center; 
     border: solid black 1px;
-    width: 10%;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     margin-right: 10px;
 }
@@ -201,6 +215,7 @@ hr.rounded {
 }
 
 .afronding{
+    background-color: white;
     position: fixed;
     border-top: solid black;
     display: flex;
