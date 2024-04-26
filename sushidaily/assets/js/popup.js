@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     addButtons.forEach(function (button) {
         button.addEventListener('click', function () {
-            popupOverlay.style.display = 'flex'; // Show the popup
+            popupOverlay.style.display = 'flex'; 
         });
     });
 
     closePopup.addEventListener('click', function () {
-        popupOverlay.style.display = 'none'; // Hide the popup when close button is clicked
+        popupOverlay.style.display = 'none'; 
     });
 });
