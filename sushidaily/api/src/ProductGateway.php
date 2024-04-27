@@ -26,6 +26,42 @@ class ProductGateway{
         }
         return $data;
     }
+    public function get(string $name){
+        $name =explode("_", $name);
+        switch (count($name)){
+            case 1:
+                $name = $name;
+                break;
+            case 2:
+                $name = $name[0] . " " . $name[1];
+                break;
+            case 3:
+                $name = $name[0] . " " . $name[1] . " " . $name[2];
+                break;
+            case 4:
+                $name = $name[0] . " " . $name[1] . " " . $name[2] . " " . $name[3];
+                break;
+        };
+
+        $sql = "SELECT * 
+                FROM products_english
+                WHERE name = :name";
+        $stmt = $this->conn->prepare($sql);
+
+        $stmt->bindValue(":name", $name, PDO::PARAM_STR);
+
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $row['menu'] = (bool) $row['menu'];
+        $row['drink'] = (bool) $row['drink'];
+        $row['warm'] = (bool) $row['warm'];
+        $row['attributes'] = json_decode($row['attributes']);
+        $row['suggestions'] = json_decode($row['suggestions']);
+        $data[] = $row;
+        return $data;
+            
+    }
 }
 
 ?>

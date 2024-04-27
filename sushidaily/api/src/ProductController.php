@@ -7,18 +7,19 @@ class ProductController
     {
         
     }
-    public function processRequest(string $method, ?string $id): void
+    public function processRequest(string $method, ?string $name): void
     {
-        if ($id){
-            $this->processResourceRequest($method, $id);
+        if ($name){
+            $this->processResourceRequest($method, $name);
         } else {
             $this->processCollectionRequest($method);
         }
     }
 
-    private function processResourceRequest(string $method, string $id): void
+    private function processResourceRequest(string $method, string $name): void
     {
-
+        $product = $this->gateway->get($name);
+        echo json_encode($product);
     }
     private function processCollectionRequest(string $method): void
     {
@@ -27,6 +28,7 @@ class ProductController
                 echo json_encode($this->gateway->getAll());
                 break;
             case 'POST':
+                echo "POST is not yet supported";
         }
     }
 }
