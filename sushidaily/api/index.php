@@ -17,7 +17,7 @@ if ($parts[4] != 'products'){
     exit;
 }
 
-$id= $parts[5] ?? null;
+$name= $parts[5] ?? null;
 
 $database = new Database('localhost', 'sushi_daily', 'root', 'root');
 
@@ -27,7 +27,7 @@ $database->getConnection();
 
 $controller = new ProductController($gateway);
 
-$controller->processRequest($_SERVER['REQUEST_METHOD'], $id);
+$controller->processRequest($_SERVER['REQUEST_METHOD'], $name);
 
 
 
