@@ -33,11 +33,48 @@ class ProductController
                 echo json_encode($this->gateway->getAll());
                 break;
             case 'POST':
-                echo "POST is not yet supported";
+                $data =  (array) json_decode(file_get_contents("php://input"), true);
+
+                $errors = $this->getValidationErrors($data);
+
+                if (! empty($errors)){
+                    http_response_code(422);
+                    echo json_encode(["errors" => $errors]);
+                    break;
+                }
+
+                $id = $this->gateway->create($data);
+                http_response_code(201);
+                echo json_encode([
+                    "message" => "product created",
+                    "id" => $id
+                ]);
+                break;
+            default:
+                http_response_code(405);
+                header("Allow: GET, POST");
         }
     }
     private function catagoryRequest(string $catagory){
         echo json_encode($this->gateway->getCat($catagory));
+    }
+
+    private function getValidationErrors(array $data):array {
+        $errors = [];
+        if (empty($data["contents"])){
+            $errors[] = "Content is required";
+        }
+        if (empty($data["price"])){
+            $errors[] = "Price is required";
+        } else{ 
+            if (filter_var($data["price"], FILTER_VALIDATE_FLOAT) === false){
+                $errors[] = "Price should be a number";
+            }
+        }
+        if (empty($data["takeaway"])){
+            $errors[] = "Takeaway Boolean is required";
+        }
+        return $errors;
     }
 }
 ?>

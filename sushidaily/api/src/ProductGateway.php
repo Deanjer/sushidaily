@@ -93,6 +93,28 @@ class ProductGateway{
         return $data;
 
     }
+
+    public function create(array $data) : string{
+        $sql = "INSERT INTO orders (price, contents, takeaway)
+                VALUES (:price, :contents, :takeaway);";
+
+        $stmt = $this->conn->prepare($sql);
+        $contents = explode("_", $data["contents"]);
+        $contents = json_encode($contents);
+        if ($data["takeaway"] == 'false'){
+            $takeaway = false;
+        } else if ($data["takeaway"] == "true"){
+            $takeaway = true;
+        }
+        $stmt->bindValue(":price", $data["price"], PDO::PARAM_STR);
+        $stmt->bindValue(":contents", $contents, PDO::PARAM_STR);
+        $stmt->bindValue(":takeaway", $takeaway ?? false, 
+        PDO::PARAM_BOOL);
+
+        $stmt->execute();
+
+        return $this->conn->lastInsertId();
+    }
 }
 
 ?>
