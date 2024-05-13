@@ -106,6 +106,7 @@
     font-family: Avenir black;
     margin: 0;
     margin-top: 15px;
+    color: #001E42;
 }
 
 .order {
@@ -114,7 +115,6 @@
     align-items: center;
     width: 20%;
     border-radius: 10px;
-    margin: 10px;
 }
 
 .image{
@@ -128,6 +128,8 @@
     width: 60%;
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
+    color: #001E42;
 }
 
 .omschrijving p{
@@ -142,18 +144,20 @@
     justify-content: space-between;
 }
 
-.prijs h1{
+.prijs p{
     height: auto;
-    align-self: center;
+    align-self: end;
+    font-size: 30px;
 }
 
 .hoeveelheid{
     width: 100%;
     display: flex;
+    justify-content: end;
 }
 
 .min{
-    background-color: black;
+    background-color: #001E42;
     width: 25%;
     padding: 10px;
     border-radius: 10px;
@@ -168,7 +172,6 @@
 
 .min h2{
     margin: 0;
-    margin-top: -3px;
 }
 
 .aantal h2{
@@ -177,7 +180,7 @@
 }
 
 .plus{
-    background-color: red;
+    background-color: #E9444C;
     width: 25%;
     padding: 10px;
     border-radius: 10px;
@@ -187,7 +190,7 @@
 }
 
 .plus:hover{
-    background-color: #da0000;
+    background-color: #E9444C;
 }
 
 .plus h2{
@@ -201,10 +204,11 @@
 .feature{
     display: flex;
     justify-content: center; 
-    border: solid black 1px;
+    border: solid #001E42 1px;
     padding: 10px;
     border-radius: 10px;
     margin-right: 10px;
+    color: #001E42;
 }
 
 hr.rounded {
@@ -226,7 +230,10 @@ hr.rounded {
 .totaal{
     width: 50%;
     display: flex;
+    align-items: center;
     justify-content: center;
+    color: #001E42;
+    font-family: Avenir black;
 }
 
 .volgende{
@@ -237,7 +244,7 @@ hr.rounded {
 
 .volgende button{
     border: none;
-    background-color: red;
+    background-color: #E9444C;
     border-radius: 10px;
     margin: 20px;
     padding: 10px;

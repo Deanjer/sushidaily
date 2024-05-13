@@ -5,11 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     addButtons.forEach(function (button) {
         button.addEventListener('click', function () {
-            popupOverlay.style.display = 'flex'; 
+            const randomChance = Math.random();
+
+            if (randomChance < 0.3) {
+                popupOverlay.style.display = 'flex';
+            }
+            console.log(randomChance);
         });
     });
 
     closePopup.addEventListener('click', function () {
         popupOverlay.style.display = 'none'; 
     });
+
+   
 });
