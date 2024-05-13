@@ -36,13 +36,13 @@
                 </div>
             </div>
             <div class="prijs">
-                <h1>€7,99</h1>
+                <p class="lato-regular">€7,99</p>
                 <div class="hoeveelheid">
                     <div class="min">
                         <h2>-</h2>
                     </div>
                     <div class="aantal">
-                        <h2>1</h2>
+                        <h2 class="lato-regular">1</h2>
                     </div>
                     <div class="plus">
                         <h2>+</h2>
@@ -74,13 +74,13 @@
                 </div>
             </div>
             <div class="prijs">
-                <h1>€7,99</h1>
+                <p class="lato-regular">€7,99</p>
                 <div class="hoeveelheid">
                     <div class="min">
                         <h2>-</h2>
                     </div>
                     <div class="aantal">
-                        <h2>1</h2>
+                        <h2 class="lato-regular">1</h2>
                     </div>
                     <div class="plus">
                         <h2>+</h2>
@@ -112,13 +112,13 @@
                 </div>
             </div>
             <div class="prijs">
-                <h1>€7,99</h1>
+                <p class="lato-regular">€7,99</p>
                 <div class="hoeveelheid">
                     <div class="min">
                         <h2>-</h2>
                     </div>
                     <div class="aantal">
-                        <h2>1</h2>
+                        <h2 class="lato-regular">1</h2>
                     </div>
                     <div class="plus">
                         <h2>+</h2>
@@ -150,13 +150,13 @@
                 </div>
             </div>
             <div class="prijs">
-                <h1>€7,99</h1>
+                <p class="lato-regular">€7,99</p>
                 <div class="hoeveelheid">
                     <div class="min">
                         <h2>-</h2>
                     </div>
                     <div class="aantal">
-                        <h2>1</h2>
+                        <h2 class="lato-regular">1</h2>
                     </div>
                     <div class="plus">
                         <h2>+</h2>
@@ -188,13 +188,13 @@
                 </div>
             </div>
             <div class="prijs">
-                <h1>€7,99</h1>
+                <p class="lato-regular">€7,99</p>
                 <div class="hoeveelheid">
                     <div class="min">
                         <h2>-</h2>
                     </div>
                     <div class="aantal">
-                        <h2>1</h2>
+                        <h2 class="lato-regular">1</h2>
                     </div>
                     <div class="plus">
                         <h2>+</h2>

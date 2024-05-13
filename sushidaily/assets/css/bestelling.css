@@ -144,9 +144,10 @@
     justify-content: space-between;
 }
 
-.prijs h1{
+.prijs p{
     height: auto;
     align-self: end;
+    font-size: 30px;
 }
 
 .hoeveelheid{
