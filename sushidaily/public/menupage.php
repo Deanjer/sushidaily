@@ -163,4 +163,6 @@
     <script src="./../assets/js/popup.js"></script>
 </body>
 
+<script src="./../assets/js/api.js"></script>
+
 </html>
