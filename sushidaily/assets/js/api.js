@@ -10,7 +10,7 @@ async function call(){
       "contents" : "sushi_drink",
       "takeaway" : "false"
     }
-    const res = await fetch('http://localhost:3403/sushidaily/sushidaily/api/products/' + product[0], {
+    const res = await fetch('http://localhost:3000/sushidaily/sushidaily/api/products/' + product[0], {
     method: "GET",
     headers: {
      
