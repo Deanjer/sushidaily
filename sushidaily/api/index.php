@@ -17,7 +17,7 @@ set_exception_handler("ErrorHandler::handleException");
 
 $parts = explode("/", $_SERVER['REQUEST_URI']);
 
-if ($parts[4] != 'products'){
+if ($parts[count($parts) - 1] != 'products'){
     http_response_code(404);
     echo "Error 404 Not Found";
     exit;
