@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: PUT, GET, POST");
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 spl_autoload_register(function ($class){
     require __DIR__ . "/src/$class.php";
 });
@@ -17,7 +15,7 @@ set_exception_handler("ErrorHandler::handleException");
 
 $parts = explode("/", $_SERVER['REQUEST_URI']);
 
-if ($parts[count($parts) - 1] != 'products'){
+if ($parts[4] != 'products'){
     http_response_code(404);
     echo "Error 404 Not Found";
     exit;

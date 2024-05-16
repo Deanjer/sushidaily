@@ -30,6 +30,10 @@ async function call(){
         var results = await res.json();
         console.log(results);
     }
-    
-    
+
+    build();
+  }
+
+  function build(element){
+    const element
   }
