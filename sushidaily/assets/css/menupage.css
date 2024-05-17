@@ -2,8 +2,8 @@
 :root {
     --blue: #001E42;
     --red: #E9444C;
-  }
-  
+}
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -77,6 +77,7 @@
 * {
     margin: 0;
     padding: 0;
+    touch-action: manipulation;
 }
 
 body {
@@ -112,7 +113,8 @@ header {
     justify-content: space-between;
     /* Align items with space between them */
 }
-.sidebar a{
+
+.sidebar a {
     text-decoration: none;
 }
 
@@ -200,6 +202,8 @@ header {
 .menu-title {
     font-family: Avenir black;
     font-size: 35px;
+    font-size: 25px;
+    min-height: 65px;
 }
 
 .feature {
@@ -209,6 +213,7 @@ header {
     border: 1px solid var(--blue);
     border-radius: 10px;
     margin-top: 5px;
+    margin-right: 5px;
 }
 
 .price {
@@ -223,6 +228,7 @@ header {
 
 .menu-description {
     margin-top: -10px;
+    min-height: 80px;
 }
 
 .add-button {
@@ -315,8 +321,8 @@ header {
     width: 30%;
 }
 
-.product-image{
+.product-image {
     height: 100%;
     width: 100%;
-    
+
 }
