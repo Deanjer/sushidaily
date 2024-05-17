@@ -30,4 +30,83 @@ async function call(){
         var results = await res.json();
         console.log(results);
     }
+
+    for (let i  = 0; i < results.length; i++){
+    build(i + 1);
+    }
+  }
+
+  function build(item){
+    let menu_read = document.getElementsByClassName("menu")[0];
+    //menu item create
+    const menu_item = document.createElement("div");
+    menu_item.classList.add("menu-item");
+    menu_read.append(menu_item);
+
+    let menu_item_read = document.getElementsByClassName("menu-item")[item];
+
+    // product place holder image create
+    const product_placeholder_img = document.createElement("div");
+    product_placeholder_img.classList.add("product-placeholder-img");
+    product_placeholder_img.textContent = "";
+    menu_item_read.append(product_placeholder_img);
+
+    let product_placeholder_img_read = document.getElementsByClassName("product-placeholder-img")[item];
+
+    //add image
+    const product_image = document.createElement("img");
+    product_image.src = "./../assets/img/" + "avocado-maki.webp";
+    product_image.height = "100px";
+    product_image.classList.add("product-image");
+    product_placeholder_img_read.append(product_image);
+
+
+    //menu title P element
+    const menu_title = document.createElement("p");
+    menu_title.classList.add("menu-title");
+    menu_title.textContent = "menu title";
+    menu_item.append(menu_title);
+
+    //menu description
+    const menu_desc = document.createElement("p");
+    menu_desc.classList.add("lato-regular");
+    menu_desc.classList.add("menu-description");
+    menu_desc.textContent = "desc";
+    menu_item.append(menu_desc);
+
+    //featured
+    const featured = document.createElement("div");
+    featured.classList.add("feature");
+    featured.classList.add("lato-regular");
+    featured.textContent = "featured";
+    menu_item.append(featured);
+
+    //lower container
+    const lower_container = document.createElement("div");
+    lower_container.classList.add("lower-container");
+    lower_container.textContent = "";
+    menu_item.append(lower_container);
+
+    let lower_container_read = document.getElementsByClassName("lower-container")[item];
+
+    //price
+    const price = document.createElement("p");
+    price.classList.add("lato-regular");
+    price.classList.add("price");
+    price.textContent = "7,00$";
+    lower_container_read.append(price);
+
+    //add button
+    const add_button = document.createElement("div");
+    add_button.classList.add("add-button");
+    lower_container_read.append(add_button);
+
+    let add_button_read = document.getElementsByClassName("add-button")[item];
+
+    // add image
+    const img = document.createElement("img");
+    img.src = "./../assets/img/add.svg";
+    add_button_read.append(img);
+    
+    return true;
   }
