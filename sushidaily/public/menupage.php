@@ -16,10 +16,10 @@
         <div class="center">
             <div class="sidebar">
                 <ul>
-                    <li>Sushi</li>
-                    <li>Warm meals</li>
-                    <li>Pokébowls</li>
-                    <li>Drinks</li>
+                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Cold"><li>Cold</li></a>
+                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Meat"><li>Meat</li></a>
+                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Shellfish"><li>Shellfish</li></a>
+                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Heat_up"><li>Heat up</li></a>
                 </ul>
                 <div class="exit">
                     <p class="lato-bold">Stop order</p>
