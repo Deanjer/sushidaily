@@ -34,19 +34,7 @@
                 </div>
                 <div class="menu">
                     <!-- kaart 1 -->
-                    <div class="menu-item">
-                        <div class="product-placeholder-img"></div>
-                        <!-- <img class="product-image" src="" alt=""> -->
-                        <p class="menu-title">Title</p>
-                        <p class="lato-regular menu-description">Description</p>
-                        <div class="feature lato-regular">Feature</div>
-                        <div class="lower-container">
-                            <p class="lato-regular price">€7,99</p>
-                            <div class="add-button">
-                                <img src="./../assets/img/add.svg">
-                            </div>
-                        </div>
-                    </div>
+                  
                     <!-- einde -->
                 </div>
             </div>
