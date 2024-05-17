@@ -284,7 +284,7 @@ header {
 .popup-product-img {
     width: 100%;
     height: 20vh;
-    background-color: #ECEAE9;
+    /* background-color: #ECEAE9; */
     border-radius: 10px;
 }
 
@@ -318,5 +318,8 @@ header {
 .product-image{
     height: 100%;
     width: 100%;
-    
+}
+
+.suggestion-img{
+    height: 100%;
 }
