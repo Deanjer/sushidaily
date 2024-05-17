@@ -32,11 +32,11 @@ async function call(){
     }
 
     for (let i  = 0; i < results.length; i++){
-    build(i + 1);
+    build(i, results);
     }
   }
 
-  function build(item){
+  function build(item, results){
     let menu_read = document.getElementsByClassName("menu")[0];
     //menu item create
     const menu_item = document.createElement("div");
@@ -55,7 +55,7 @@ async function call(){
 
     //add image
     const product_image = document.createElement("img");
-    product_image.src = "./../assets/img/" + "avocado-maki.webp";
+    product_image.src = "./../assets/img/" + results[item]["img_path"];
     product_image.height = "100px";
     product_image.classList.add("product-image");
     product_placeholder_img_read.append(product_image);
@@ -64,22 +64,25 @@ async function call(){
     //menu title P element
     const menu_title = document.createElement("p");
     menu_title.classList.add("menu-title");
-    menu_title.textContent = "menu title";
+    menu_title.textContent = results[item]["name"];
     menu_item.append(menu_title);
 
     //menu description
     const menu_desc = document.createElement("p");
     menu_desc.classList.add("lato-regular");
     menu_desc.classList.add("menu-description");
-    menu_desc.textContent = "desc";
+    menu_desc.textContent = results[item]["line_disc"];
     menu_item.append(menu_desc);
 
     //featured
-    const featured = document.createElement("div");
-    featured.classList.add("feature");
-    featured.classList.add("lato-regular");
-    featured.textContent = "featured";
-    menu_item.append(featured);
+    for (let j = 0; j < results[item]["attributes"]["catagories"].length; j++){
+      const featured = document.createElement("div");
+      featured.classList.add("feature");
+      featured.classList.add("lato-regular");
+      featured.textContent = results[item]["attributes"]["catagories"][j];
+      menu_item.append(featured);
+    }
+    
 
     //lower container
     const lower_container = document.createElement("div");
@@ -93,7 +96,7 @@ async function call(){
     const price = document.createElement("p");
     price.classList.add("lato-regular");
     price.classList.add("price");
-    price.textContent = "7,00$";
+    price.textContent = "€" + results[item]["price"];
     lower_container_read.append(price);
 
     //add button
