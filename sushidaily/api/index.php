@@ -23,7 +23,7 @@ if ($parts[4] != 'products'){
 
 $name= $parts[5] ?? null;
 
-$database = new Database('localhost', 'sushi_daily', 'root', 'root');
+$database = new Database('localhost', 'sushi_daily', 'root', '');
 
 $gateway = new ProductGateway($database);
 

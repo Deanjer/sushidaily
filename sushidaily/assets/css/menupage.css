@@ -1,3 +1,9 @@
+/* colors */
+:root {
+    --blue: #001E42;
+    --red: #E9444C;
+  }
+  
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -97,7 +103,7 @@ header {
 
 /* sidebar */
 .sidebar {
-    border-right: 1px solid #001E42;
+    border-right: 1px solid var(--blue);
     height: 90vh;
     width: 20rem;
     display: flex;
@@ -106,12 +112,15 @@ header {
     justify-content: space-between;
     /* Align items with space between them */
 }
+.sidebar a{
+    text-decoration: none;
+}
 
 .sidebar li {
     height: 5vh;
     width: auto;
-    color: #001E42;
-    border-bottom: 1px solid #001E42;
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,7 +135,7 @@ header {
 }
 
 .exit p {
-    color: #E9444C;
+    color: var(--red);
 }
 
 /* menu-container */
@@ -139,7 +148,7 @@ header {
 
 .menu-container h2 {
     font-family: Avenir black;
-    color: #001E42;
+    color: var(--blue);
     font-size: 40px;
 }
 
@@ -155,8 +164,8 @@ header {
 .shopping-cart {
     width: 50px;
     height: 50px;
-    color: #001E42;
-    fill: #001E42;
+    color: var(--blue);
+    fill: var(--blue);
 }
 
 .menu {
@@ -171,7 +180,7 @@ header {
     height: 30vh;
     background-color: #ffff;
     /* border: #fff; */
-    border: #001E42;
+    border: var(--blue);
     border-radius: 25px;
 }
 
@@ -183,7 +192,7 @@ header {
 }
 
 .menu-item {
-    color: #001E42;
+    color: var(--blue);
     width: 48%;
     margin-bottom: 10px;
 }
@@ -197,7 +206,7 @@ header {
     display: inline-block;
     height: auto;
     padding: 10px;
-    border: 1px solid #001E42;
+    border: 1px solid var(--blue);
     border-radius: 10px;
     margin-top: 5px;
 }
@@ -223,7 +232,7 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background-color: #001E42;
+    background-color: var(--blue);
 }
 
 /* popup */
