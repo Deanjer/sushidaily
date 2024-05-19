@@ -33,9 +33,6 @@
                     </svg>
                 </div>
                 <div class="menu">
-                    <!-- kaart 1 -->
-                  
-                    <!-- einde -->
                 </div>
             </div>
         </div>
