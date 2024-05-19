@@ -1,3 +1,5 @@
+var index = [];
+
 var product = window.location.search.split("?");
 product.shift(0);
 console.log(product[0]);
@@ -102,6 +104,8 @@ async function call(){
     //add button
     const add_button = document.createElement("div");
     add_button.classList.add("add-button");
+    add_button.addEventListener("click", () => {
+      pop_up(item, results)});
     lower_container_read.append(add_button);
 
     let add_button_read = document.getElementsByClassName("add-button")[item];
@@ -113,3 +117,42 @@ async function call(){
     
     return true;
   }
+
+
+  function pop_up(item, results){
+    const randomChance = Math.random();
+
+            if (randomChance < 0.3) {
+                popupOverlay.style.display = 'flex';
+                
+                // more JS Dom
+                for (let k = 1; k < 4; k++){
+
+                  document.getElementById("item_" + k).innerHTML = results[item]["suggestions"]["suggestions"][k - 1];
+                  
+                  let suggestion_img_read = document.getElementsByClassName("popup-product-img")[k - 1];
+                  find_item(results[item]["suggestions"]["suggestions"][k - 1], results, k);
+                  document.getElementsByClassName("suggestion_price")[k - 1].innerHTML = "€" + results[index[k]]["price"];
+
+                  const img_suggestion = document.createElement("img");
+                  img_suggestion.classList.add("suggestion-img");
+                  img_suggestion.src = "./../assets/img/" + results[index[k]]["img_path"];
+                  suggestion_img_read.append(img_suggestion);
+                }
+                
+            }
+            console.log(randomChance);
+  }
+  closePopup.addEventListener('click', function () {
+    popupOverlay.style.display = 'none'; 
+});
+
+
+function find_item(name, results, k){
+  for (let l = 0; l < results.length; l++){
+    if (results[l]["name"] == name){
+      console.log("FOUND IT!");
+      index[k] = l;
+    }
+  }
+}
