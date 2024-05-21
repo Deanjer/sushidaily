@@ -1,3 +1,5 @@
+sessionStorage.clear();
+
 var index = [];
 
 var product = window.location.search.split("?");
@@ -105,6 +107,16 @@ async function call(){
     const add_button = document.createElement("div");
     add_button.classList.add("add-button");
     add_button.addEventListener("click", () => {
+      let check = sessionStorage.getItem("order");
+      console.log(check);
+      let current_storage = [sessionStorage.getItem("order")];
+      if (check === null){
+        current_storage = [results[item]["name"]];
+      } else {
+        current_storage.push(results[item]["name"]);
+      }
+      sessionStorage.setItem("order",current_storage);
+      console.log("session: " + JSON.stringify(sessionStorage.getItem("order")));
       pop_up(item, results)});
     lower_container_read.append(add_button);
 
@@ -141,7 +153,6 @@ async function call(){
                 }
                 
             }
-            console.log(randomChance);
   }
   closePopup.addEventListener('click', function () {
     popupOverlay.style.display = 'none'; 
@@ -151,7 +162,6 @@ async function call(){
 function find_item(name, results, k){
   for (let l = 0; l < results.length; l++){
     if (results[l]["name"] == name){
-      console.log("FOUND IT!");
       index[k] = l;
     }
   }
