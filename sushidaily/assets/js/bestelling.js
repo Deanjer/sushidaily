@@ -44,7 +44,7 @@ async function call(){
             createOrderElement(i, results);
             total_price = total_price + results[index[i]]["price"];
         }
-        document.getElementById("total_price").innerHTML = "total : " + total_price;
+        document.getElementById("total_price").innerHTML = "total : €" + total_price;
     }}
 
 
