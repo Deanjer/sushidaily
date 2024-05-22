@@ -11,17 +11,19 @@
 <body>
     <div class="center">
         <div class="title">
-            <h1>Bestelling</h1><a href=""><button>&#x2715</button></a>
+            <h1>Bestelling</h1><a href="./menupage.php"><button>&#x2715</button></a>
         </div>
-        
+
     </div>
     <div class="afronding">
         <div class="totaal">
-            <h1 id="total_price">Totaal: €23,99</h1>
+            <h1 id="total_price">Totaal: €0
+            </h1>
         </div>
-        <div class="volgende"><button>
-                <h1>Volgende</h1>
-            </button></div>
+        <div class="volgende"><a href="./betaaling.php"><button>
+                    <h1>Volgende</h1>
+                </button>
+            </a></div>
     </div>
 </body>
 <script src="./../assets/js/bestelling.js"></script>

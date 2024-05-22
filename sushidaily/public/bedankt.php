@@ -18,7 +18,7 @@
         <div class="text avenir"><strong>Bedankt voor je bestelling!</strong></div>
         <div class="text lato-regular">Order: 1902309</div>
     </div>
-    <div class="start"><a href=""><button><strong>Terug naar start</strong></button></a></div>
+    <div class="start"><a href="./index.php"><button><strong>Terug naar start</strong></button></a></div>
 </body>
 
 </html>

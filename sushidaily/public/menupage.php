@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <?php include 'ProductController.php' ?>
     <div class="container">
         <header>
             <img src="./../assets/img/logo-secondary-blue.svg" alt="" style="max-width: 360px">
@@ -16,21 +17,31 @@
         <div class="center">
             <div class="sidebar">
                 <ul>
-                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Cold"><li>Cold</li></a>
-                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Meat"><li>Meat</li></a>
-                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Shellfish"><li>Shellfish</li></a>
-                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Heat_up"><li>Heat up</li></a>
+                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Cold">
+                        <li>Cold</li>
+                    </a>
+                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Meat">
+                        <li>Meat</li>
+                    </a>
+                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Shellfish">
+                        <li>Shellfish</li>
+                    </a>
+                    <a href="http://localhost:3000/sushidaily/sushidaily/public/menupage.php?Heat_up">
+                        <li>Heat up</li>
+                    </a>
                 </ul>
                 <div class="exit">
-                    <p class="lato-bold">Stop order</p>
+                    <p id="stopOrder" class="lato-bold">Stop order</p>
                 </div>
+
             </div>
             <div class="menu-container">
                 <div class="menu-header">
-                    <h2 class="">Warm meals</h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="shopping-cart">
-                        <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" fill="#001E42" />
-                    </svg>
+                    <h2 class=""><?php echo $name ?></h2>
+                    <a href="./bestelling.php"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="shopping-cart">
+                            <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" fill="#001E42" />
+                        </svg>
+                    </a>
                 </div>
                 <div class="menu">
                 </div>
@@ -91,10 +102,16 @@
             </div>
         </div>
     </div>
-    
+
 </body>
+
 
 <script src="./../assets/js/api.js"></script>
 <!-- <script src="./../assets/js/popup.js"></script> -->
-
+<script>
+    document.getElementById('stopOrder').addEventListener('click', function() {
+        window.location.href = './index.php';
+      
+    });
+</script>
 </html>
