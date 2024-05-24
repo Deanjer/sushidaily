@@ -20,4 +20,5 @@ async function call(){
     for (let i  = 0; i < results.length; i++){
     build(i, results);
     }
+    sessionStorage.clear();
   }
