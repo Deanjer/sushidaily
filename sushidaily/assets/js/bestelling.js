@@ -8,6 +8,8 @@ product.shift(0);
 
 
 let index = []
+let og_price = [];
+
 
 call();
 
@@ -37,19 +39,20 @@ async function call(){
         })
         var results = await res.json();
         console.log(results);
+        
         let total_price = 0;
         for (let i = 0; i < order.length; i++){
+            
             find_item(order[i], results, i);
-            console.log(index);
-            createOrderElement(i, results);
+            og_price[i] = results[index[i]]["price"];
+  
+            console.log(total_price);
             total_price = total_price + results[index[i]]["price"];
+            createOrderElement(i, results, og_price);
         }
-        document.getElementById("total_price").innerHTML = "total : €" + total_price;
+        document.getElementById("total_price").innerHTML = Math.round(total_price * 100) / 100;
+        document.getElementById("href").href = './betaaling.php?price=' + Math.round(parseFloat(document.getElementById("total_price").innerHTML) * 100) / 100;
     }}
-
-
-    
-
     function find_item(name, results, k){
         for (let l = 0; l < results.length; l++){
           if (results[l]["name"] == name){
@@ -134,6 +137,22 @@ function createOrderElement(i, results) {
 
     const minText = document.createElement('h2');
     minText.textContent = '-';
+    minText.addEventListener("click", () => {
+      let current_number = parseInt(document.getElementsByClassName("number_of_items")[i].innerHTML)
+      if (current_number == 0){
+        console.log("its 0!!")
+      } else {
+      let nroi = parseInt(document.getElementsByClassName("number_of_items")[i].innerHTML) - 1;
+      document.getElementsByClassName("number_of_items")[i].innerHTML = nroi;
+      document.getElementById("total_price").innerHTML = Math.round((parseFloat(document.getElementById("total_price").innerHTML) - parseFloat(og_price[i])) * 100) / 100;
+      document.getElementById("href").href = './betaaling.php?price=' + Math.round(parseFloat(document.getElementById("total_price").innerHTML) * 100) / 100;
+      
+      }
+      console.log(typeof(og_price) + typeof(current_number) + typeof(total_price))
+      console.log(total_price);
+      results[index[i]]["price"] = og_price[i]*(current_number - 1);
+      
+    });
     min.appendChild(minText);
 
     hoeveelheid.appendChild(min);
@@ -144,7 +163,8 @@ function createOrderElement(i, results) {
 
     const aantalText = document.createElement('h2');
     aantalText.classList.add('lato-regular');
-    aantalText.textContent = '1';
+    aantalText.classList.add('number_of_items');
+    aantalText.textContent = 1;
     aantal.appendChild(aantalText);
 
     hoeveelheid.appendChild(aantal);
@@ -155,6 +175,14 @@ function createOrderElement(i, results) {
 
     const plusText = document.createElement('h2');
     plusText.textContent = '+';
+    plusText.addEventListener("click", () => {
+      let nroi = parseInt(document.getElementsByClassName("number_of_items")[i].innerHTML) + 1;
+      document.getElementsByClassName("number_of_items")[i].innerHTML = nroi;
+      console.log(typeof(parseInt(document.getElementById("total_price").innerHTML)) + " hallo " + typeof(parseInt(og_price[i])));
+      console.log(parseInt(document.getElementById("total_price").innerHTML))
+      document.getElementById("total_price").innerHTML = Math.round((parseFloat(document.getElementById("total_price").innerHTML) + parseFloat(og_price[i])) * 100) / 100;
+      document.getElementById("href").href = './betaaling.php?price=' + Math.round(parseFloat(document.getElementById("total_price").innerHTML) * 100) / 100;
+    });
     plus.appendChild(plusText);
 
     hoeveelheid.appendChild(plus);

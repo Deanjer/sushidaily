@@ -15,10 +15,10 @@
             </svg>
             </a>
         </div>
-        <div class="text avenir"><strong>Totaal: $23,99</strong></div>
+        <div class="text avenir"><strong>Totaal: €<span id="price"><?php echo $_GET["price"]?><span></strong></div>
         <div class="text lato-regular">Order: 1902309</div>
     </div>
     <div class="intructies avenir"><strong>Volg intructies op pinautomaat.</strong></div>
 </body>
-
+<script src="../assets/js/betaaling.js"></script>
 </html>

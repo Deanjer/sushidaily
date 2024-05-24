@@ -1,5 +1,3 @@
-sessionStorage.clear();
-
 var index = [];
 
 var product = window.location.search.split("?");
@@ -110,7 +108,7 @@ async function call(){
       let check = sessionStorage.getItem("order");
       console.log(check);
       let current_storage = [sessionStorage.getItem("order")];
-      if (check === null){
+      if (check == null){
         current_storage = [results[item]["name"]];
       } else {
         current_storage.push(results[item]["name"]);
@@ -145,11 +143,13 @@ async function call(){
                   let suggestion_img_read = document.getElementsByClassName("popup-product-img")[k - 1];
                   find_item(results[item]["suggestions"]["suggestions"][k - 1], results, k);
                   document.getElementsByClassName("suggestion_price")[k - 1].innerHTML = "€" + results[index[k]]["price"];
-
-                  const img_suggestion = document.createElement("img");
-                  img_suggestion.classList.add("suggestion-img");
-                  img_suggestion.src = "./../assets/img/" + results[index[k]]["img_path"];
-                  suggestion_img_read.append(img_suggestion);
+                  if (typeof(document.getElementsByClassName("suggestion-img")[k - 1]) == 'undefined'){
+                    const img_suggestion = document.createElement("img");
+                    img_suggestion.classList.add("suggestion-img");
+                    img_suggestion.src = "./../assets/img/" + results[index[k]]["img_path"];
+                    suggestion_img_read.append(img_suggestion);
+                  }
+                  
                 }
                 
             }
@@ -159,7 +159,7 @@ async function call(){
 });
 
 
-function find_item(name, results, k){
+function find_item(name, results, k, pop_up){
   for (let l = 0; l < results.length; l++){
     if (results[l]["name"] == name){
       index[k] = l;

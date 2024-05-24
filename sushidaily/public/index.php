@@ -15,13 +15,13 @@
     <div class="main-container">
         <div class="select-container">
             <div class="nl">
-                <a href="./menupage.php">
+                <a href="./menupage.html">
                     <img src="./../assets/img/nl.svg" alt="">
                 </a>
             </div>
 
             <div class="en">
-                <a href="./menupage.php">
+                <a href="./menupage.html">
                     <img src="./../assets/img/sh.svg" alt="">
                 </a>
             </div>
